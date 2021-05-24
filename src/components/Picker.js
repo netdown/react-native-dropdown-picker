@@ -106,6 +106,7 @@ function Picker({
     maxHeight = 200,
     renderBadgeItem = null,
     renderListItem = null,
+    renderModalFooter = null,
     itemSeparator = false,
     bottomOffset = 0,
     badgeColors = BADGE_COLORS,
@@ -1506,6 +1507,7 @@ function Picker({
             <View style={_modalContentContainerStyle}>
                 {SearchComponent}
                 {DropDownFlatListComponent}
+                {renderModalFooter !== null && renderModalFooter()}
             </View>
         </Modal>
     ), [open, SearchComponent, DropDownComponentWrapper, _modalContentContainerStyle, modalProps]);
